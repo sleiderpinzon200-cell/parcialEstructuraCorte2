@@ -6,6 +6,7 @@ class Pila {
     // Agregar elemento a la pila (push)
     push(elemento) {
         this.items.push(elemento);
+        console.log("Agregado: " + elemento.Nombre + " - " + elemento.Edad);
     }
 
     // Eliminar elemento de la pila (pop)
@@ -13,7 +14,9 @@ class Pila {
         if (this.items.length === 0) {
             return null; // Pila vacía
         }
-        return this.items.pop();
+        let elemento = this.items.pop();
+        console.log("Eliminado: " + elemento.Nombre + " - " + elemento.Edad);
+        return elemento;
     }
 
     // Ver el elemento en la cima sin eliminarlo
@@ -45,6 +48,7 @@ pila.push({ Nombre: "Luis", Edad: 20 });
 pila.push({ Nombre: "Maria", Edad: 28 });
 // Eliminar el último elemento
 let ultimo = pila.pop();
+console.log(ultimo);
 console.log(ultimo);
 console.log("-------------------");
 // Ver el elemento en la cima
